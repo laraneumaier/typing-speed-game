@@ -1,0 +1,29 @@
+body{
+    background-color: #f1f1f1;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    text-align: center;
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+    background-color:rgba(0, 128, 128, 0.698);
+    height: auto;
+    
+}
+.container p{
+    font-size: 30px;
+}
+h1{
+    font-size: 55px;
+    padding-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+.container input{
+    padding: 20px 70px;
+    margin: 25px 0;
+    box-sizing: border-box;
+    font-size: 22px;
+}

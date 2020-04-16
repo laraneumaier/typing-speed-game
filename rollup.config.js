@@ -5,7 +5,8 @@ export default {
     input: "./src/index.ts",
     output: {
         format: "iife",
-        file: "./build/bundle.js"
+        file: "./build/bundle.js",
+        name: "mymodule"
     },
     plugins: [
         typescript({
