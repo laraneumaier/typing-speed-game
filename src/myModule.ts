@@ -1,8 +1,30 @@
-export const helloWorld: string = "Hello world";
+const programmingWords : string[] = [
+    "algorithm",
+    "flowchart",
+    "output",
+    "parameter",
+    "debugger",
+    "validation",
+    "operators",
+    "procedure",
+    "loop",
+    "indentation",
+    "ascii",
+    "code",
+    "object-oriented",
+    "declaration",
+    "expression",
+    "hardcode",
+    "iteration",
+    "null",
+    "pointer",
+    "runtime"
+]
 
-export class Beispiel extends HTMLElement{
-    constructor(){
-        super();
-        this.innerHTML = "<h1>Hello World</h1>";
-    }
+export function showWord (): void{
+    let randomnumber:number = (Math.floor(Math.random() * 19)); // random number from 0 till 19
+    let word = document.createElement("p");
+    let wordspan: HTMLElement | null = document.getElementById("random");
+    word.innerHTML = programmingWords[randomnumber];
+    wordspan!.appendChild(word);
 }

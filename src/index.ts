@@ -1,33 +1,26 @@
-// import { helloWorld, Beispiel } from './myModule';
-// import { alertMe } from './myOtherModule';
 
-const programmingWords : string[] = [
-    "algorithm",
-    "flowchart",
-    "output",
-    "parameter",
-    "debugger",
-    "validation",
-    "operators",
-    "procedure",
-    "loop",
-    "indentation",
-    "ascii",
-    "code",
-    "object-oriented",
-    "declaration",
-    "expression",
-    "hardcode",
-    "iteration",
-    "null",
-    "pointer",
-    "runtime"
-]
+import { showWord } from "./myModule";
 
-export function showWord (): void{
-    let randomnumber:number = (Math.floor(Math.random() * 19)); // random number from 0 till 19
-    let word = document.createElement("p");
-    let wordspan: HTMLElement | null = document.getElementById("random");
-    word.innerHTML = programmingWords[randomnumber];
-    wordspan!.appendChild(word);
-}
+var counter = 10;
+export var countdown = setInterval(function(){
+    if(counter <= 0){
+        clearInterval(countdown);
+        alert("FINISH");
+    }
+    else{
+        console.log(counter);
+        counter -= 1;
+    }
+}, 1000);
+    
+
+
+
+export function timeCounter (){
+    var time:number = 1000;
+    const timeIntervall = setInterval(showWord, time);
+    clearInterval(timeIntervall);
+    console.log("es ist vorbei");
+    }
+
+
