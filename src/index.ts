@@ -2,7 +2,7 @@
 import { showWord } from "./myModule";
 
 let counter:number = 10;
-export const countdown = setInterval((){
+export const countdown = setInterval( () => {
     if(counter < 0){
         clearInterval(countdown);
         alert("FINISH");
