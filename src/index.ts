@@ -1,26 +1,17 @@
 
 import { showWord } from "./myModule";
 
-var counter = 10;
-export var countdown = setInterval(function(){
-    if(counter <= 0){
+let counter:number = 10;
+export const countdown = setInterval((){
+    if(counter < 0){
         clearInterval(countdown);
         alert("FINISH");
-    }
-    else{
-        console.log(counter);
+    } else{
+        const showTime: HTMLSpanElement | null  = document.getElementById("countdown");
+        showTime!.innerHTML = counter + " seconds";
         counter -= 1;
     }
-}, 1000);
+}, 1000); 
     
-
-
-
-export function timeCounter (){
-    var time:number = 1000;
-    const timeIntervall = setInterval(showWord, time);
-    clearInterval(timeIntervall);
-    console.log("es ist vorbei");
-    }
 
 
