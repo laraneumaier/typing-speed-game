@@ -1,3 +1,4 @@
+
 const programmingWords : string[] = [
     "algorithm",
     "flowchart",
@@ -26,23 +27,17 @@ export function showWord()  {
         createWord(); 
     }
 }
+const word:HTMLParagraphElement = document.createElement("p");
+word.setAttribute("id","p-random");
+
 function createWord (){
     let randomnumber:number = (Math.floor(Math.random() * 19)); // random number from 0 till 19
-    const word: HTMLParagraphElement = document.createElement("p");
     let wordspan: HTMLElement | null = document.getElementById("random");
     randomword = word.innerHTML = programmingWords[randomnumber];
     wordspan!.appendChild(word);
-    return randomword;
-}
-
-export function input () {
-    const textEl = document.querySelector<HTMLInputElement>('input')!;
-    if (randomword === textEl.value){
-        textEl.value = "";
-        createWord ();
-        console.log("+1");
-    }
+    return randomword; 
 }
 
 
     
+
