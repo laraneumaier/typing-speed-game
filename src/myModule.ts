@@ -23,18 +23,26 @@ const programmingWords : string[] = [
 export var randomword:string;
 export function showWord()  {
     if (randomword === undefined){
-        let randomnumber:number = (Math.floor(Math.random() * 19)); // random number from 0 till 19
-        let word: HTMLParagraphElement = document.createElement("p");
-        let wordspan: HTMLElement | null = document.getElementById("random");
-        randomword = word.innerHTML = programmingWords[randomnumber];
-        wordspan!.appendChild(word);
-        return randomword;
+        createWord(); 
+    }
+}
+function createWord (){
+    let randomnumber:number = (Math.floor(Math.random() * 19)); // random number from 0 till 19
+    const word: HTMLParagraphElement = document.createElement("p");
+    let wordspan: HTMLElement | null = document.getElementById("random");
+    randomword = word.innerHTML = programmingWords[randomnumber];
+    wordspan!.appendChild(word);
+    return randomword;
+}
+
+export function input () {
+    const textEl = document.querySelector<HTMLInputElement>('input')!;
+    if (randomword === textEl.value){
+        textEl.value = "";
+        createWord ();
+        console.log("+1");
     }
 }
 
-export function input (){
-    const textEl = document.querySelector<HTMLInputElement>('input')!;
-    if (randomword === textEl.value){
-        ;
-    }
-}
+
+    

@@ -1,5 +1,5 @@
 
-import { showWord, input } from "./myModule";
+import { showWord, input} from "./myModule";
 import {time} from "./myOtherModule"
 
 
