@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/jquery": "^3.3.35",
+    "install": "^0.13.0",
     "jquery": "^3.5.0",
     "rollup": "^2.1.0",
     "rollup-plugin-typescript2": "^0.26.0",

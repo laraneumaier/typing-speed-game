@@ -1,3 +1,17 @@
-export function alertMe():void {
-    alert("ATTENTION PLEASE");
-}
+import { showWord } from "./myModule";
+
+let counter: number = 10;
+
+export function time(){
+    showWord ();
+    const countdown = setInterval( () => {
+        if(counter < 0){
+            clearInterval(countdown);
+            alert("FINISH");
+        } else{
+            const showTime: HTMLSpanElement | null  = document.getElementById("countdown");
+            showTime!.innerHTML = counter + " seconds";
+            counter -= 1; 
+        }
+    }, 1000); 
+} 
