@@ -1,18 +1,21 @@
-import { showWord, input } from "./words";
+import { check } from "./words";
 
-let counter: number = 10;
-
+let actuellCounter:number;
+var counter:number;
+const showTime: HTMLSpanElement = document.getElementById("countdown")!;
 export function time(){
-    const countdown = setInterval( () => {
-        if(counter < 0){
-            clearInterval(countdown);
-            alert("FINISH");
-        } else if (input() === true){
-            counter += 2;
-        }else{
-            const showTime: HTMLSpanElement = document.getElementById("countdown")!;
+    counter = 10;
+    let countdown = setInterval( () => { 
+            counter -= 1;
             showTime.innerHTML = counter + " seconds";
-            counter -= 1; 
-        }
+            if (counter <= 0){
+                clearInterval(countdown);
+                console.log("finish");                
+            }
     }, 1000); 
 } 
+
+export function addTime (){
+    counter += 5;
+    showTime.innerHTML = counter + " seconds";
+}

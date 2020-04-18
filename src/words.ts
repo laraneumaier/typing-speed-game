@@ -1,3 +1,5 @@
+import {time,addTime} from "./time";
+import { plusScore } from "./score";
 
 const programmingWords : string[] = [
     "algorithm",
@@ -38,16 +40,18 @@ function createWord ():string {
     return randomword; 
 }
 
-export function input ():boolean {
+export function check ():boolean {
     const textEl = document.querySelector<HTMLInputElement>('input')!;
     if (randomword === textEl.value){
         textEl.value = "";
         createWord ();
+        addTime();
         return true;
+        
     }else {
         return false;
     }
 }
 
-    
+
 
