@@ -21,23 +21,33 @@ const programmingWords : string[] = [
     "pointer",
     "runtime"
 ]
-export var randomword:string;
+
 export function showWord()  {
     if (randomword === undefined){
         createWord(); 
     }
 }
 const word:HTMLParagraphElement = document.createElement("p");
-word.setAttribute("id","p-random");
+let randomword:string;
 
-function createWord (){
+function createWord ():string {
     let randomnumber:number = (Math.floor(Math.random() * 19)); // random number from 0 till 19
-    let wordspan: HTMLElement | null = document.getElementById("random");
+    let wordspan: HTMLSpanElement = document.getElementById("random")!; 
     randomword = word.innerHTML = programmingWords[randomnumber];
-    wordspan!.appendChild(word);
+    wordspan.appendChild(word);
     return randomword; 
 }
 
+export function input ():boolean {
+    const textEl = document.querySelector<HTMLInputElement>('input')!;
+    if (randomword === textEl.value){
+        textEl.value = "";
+        createWord ();
+        return true;
+    }else {
+        return false;
+    }
+}
 
     
 

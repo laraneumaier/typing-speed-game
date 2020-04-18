@@ -1,12 +1,13 @@
 
-import { showWord, input} from "./myModule";
-import {time} from "./myOtherModule"
+import { showWord, input} from "./words";
+import {time} from "./time"
 
 
 export function start (){
-    time();
+        showWord();
 }
 
-export function ne(){
+export function inputStart(){
     input();
+    time();
 }
