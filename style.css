@@ -6,10 +6,12 @@ body{
 .container{
     text-align: center;
     position: relative;
-    width: 500px;
+    width: 750px;
     margin: 0 auto;
     background-color:rgba(0, 128, 128, 0.698);
-    height: auto;
+    height: 400px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
     
 }
 .container p{
@@ -18,12 +20,31 @@ body{
 h1{
     font-size: 55px;
     padding-top: 20px;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: 100;
+    padding-top: 40px;
 }
 .container input{
     padding: 20px 70px;
     margin: 25px 0;
     box-sizing: border-box;
-    font-size: 22px;
+    font-size: 30px;
+    visibility: hidden;
+}
+
+
+
+.button-start {
+    display: block;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 30px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+#score {
+    float: right; 
+    margin-top: -120px;
+    padding-right: 30px;
+    font-size: 18px;
 }

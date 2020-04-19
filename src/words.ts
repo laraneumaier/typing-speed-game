@@ -23,13 +23,15 @@ const programmingWords : string[] = [
     "pointer",
     "runtime"
 ]
+export const textEl = document.querySelector<HTMLInputElement>('input')!;
 
 export function showWord()  {
+    textEl.style.visibility = "visible";
     if (randomword === undefined){
         createWord(); 
     }
 }
-const word:HTMLParagraphElement = document.createElement("p");
+export const word:HTMLParagraphElement = document.createElement("p");
 let randomword:string;
 
 function createWord ():string {
@@ -41,7 +43,6 @@ function createWord ():string {
 }
 
 export function check ():boolean {
-    const textEl = document.querySelector<HTMLInputElement>('input')!;
     if (randomword === textEl.value){
         textEl.value = "";
         createWord ();
@@ -53,6 +54,5 @@ export function check ():boolean {
         return false;
     }
 }
-
 
 

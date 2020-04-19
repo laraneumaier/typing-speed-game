@@ -1,4 +1,4 @@
-let score: number = 0;
+export let score: number = 0;
 let result: number;
 export function plusScore(n:number){
     showScore(score +=n);
@@ -9,6 +9,3 @@ export function showScore (n:number):number {
     return score;
 }
 
-export function showResultScore (){
-    console.log (score);
-}
