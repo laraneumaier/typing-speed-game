@@ -8,7 +8,6 @@ import { showScore } from "./score";
 export function start (){
         showWord();
         time();
-        showScore();
 }
 
 export function inputStart(){

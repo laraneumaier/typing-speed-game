@@ -46,6 +46,7 @@ export function check ():boolean {
         textEl.value = "";
         createWord ();
         addTime();
+        plusScore(+1);
         return true;
         
     }else {

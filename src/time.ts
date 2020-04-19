@@ -1,4 +1,5 @@
 import { check } from "./words";
+import { showResultScore } from "./score";
 
 let actuellCounter:number;
 var counter:number;
@@ -10,12 +11,12 @@ export function time(){
             showTime.innerHTML = counter + " seconds";
             if (counter <= 0){
                 clearInterval(countdown);
-                console.log("finish");                
+                showResultScore();               
             }
     }, 1000); 
 } 
 
 export function addTime (){
-    counter += 5;
+    counter += 3;
     showTime.innerHTML = counter + " seconds";
 }
