@@ -6,12 +6,13 @@ var counter:number;
 const showTime: HTMLSpanElement = document.getElementById("countdown")!;
 export function time(){
     counter = 10;
-    let countdown = setInterval( () => {
+    let countdown= setInterval( () => {
             counter -= 1;
             showTime.innerHTML = counter + " seconds";
             if (counter <= 0){
-                clearInterval(countdown); 
-                gameOver();  
+                clearInterval(countdown);
+                showTime.innerHTML = ""; 
+                gameOver();
             }
     }, 1000); 
 } 

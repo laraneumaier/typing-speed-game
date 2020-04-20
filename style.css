@@ -15,7 +15,7 @@ body{
     
 }
 .container p{
-    font-size: 30px;
+    font-size: 22px;
 }
 h1{
     font-size: 55px;
@@ -27,7 +27,7 @@ h1{
     padding: 20px 70px;
     margin: 25px 0;
     box-sizing: border-box;
-    font-size: 30px;
+    font-size: 22px;
     visibility: hidden;
 }
 
@@ -42,9 +42,10 @@ h1{
     margin: 0 auto;
 }
 
-#score {
+.score {
     float: right; 
     margin-top: -120px;
     padding-right: 30px;
     font-size: 18px;
 }
+

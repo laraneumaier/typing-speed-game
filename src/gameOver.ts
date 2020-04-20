@@ -1,10 +1,9 @@
-import { score } from "./score";
-import { word, textEl } from "./words";
+import { inputStop } from "./words";
 import { showStartButton } from "./startButton";
-
+import { showHighScore } from "./score";
 
 export function gameOver (){
+    inputStop();
     showStartButton();
-    word.innerHTML= String(score)
-    textEl.style.visibility ="hidden";
+    showHighScore();
 }
