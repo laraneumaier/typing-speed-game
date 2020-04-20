@@ -1,7 +1,7 @@
 
 import { showWord, check} from "./words";
 import  { time } from "./time"
-import { showScore, startScore } from "./score";
+import { startScore } from "./score";
 import { deletStartButton } from "./startButton";
 
 export function start (){

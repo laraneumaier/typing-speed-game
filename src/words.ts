@@ -1,4 +1,4 @@
-import {time,addTime} from "./time";
+import {addTime} from "./time";
 import { plusScore } from "./score";
 
 const programmingWords : string[] = [
@@ -25,6 +25,7 @@ const programmingWords : string[] = [
 ]
 const textEl = document.querySelector<HTMLInputElement>('input')!;
 
+// show the new word 
 export function showWord()  {
     textEl.style.visibility = "visible";
         createWord(); 
@@ -33,6 +34,7 @@ export function showWord()  {
 const word:HTMLParagraphElement = document.createElement("p");
 let randomword:string;
 
+// create a new word 
 function createWord ():string {
     let randomnumber:number = (Math.floor(Math.random() * 19)); // random number from 0 till 19
     let wordspan: HTMLSpanElement = document.getElementById("random")!; 
@@ -41,6 +43,7 @@ function createWord ():string {
     return randomword; 
 }
 
+// if the user input is correct, a new word is shown and he gets more time
 export function check ():boolean {
     if (randomword === textEl.value){
         textEl.value = "";
@@ -54,6 +57,7 @@ export function check ():boolean {
     }
 }
 
+// the 
 export function inputStop (): void {
     word.innerHTML = "";
     textEl.value = "";
