@@ -1,3 +1,5 @@
+import { Center } from "./circleCanvas";
+
 let score: number;
 let result: number;
 const scoreInput: HTMLElement = document.getElementById("score")!;
@@ -19,10 +21,11 @@ export function showScore (n:number){
 }
 
 function scoreStars (){
-    const div: HTMLDivElement =  document.createElement("div");
-    highScoreInput.appendChild(div);
+   let  canvas = <HTMLCanvasElement>document.createElement("CANVAS");
+   let canvasContext: CanvasRenderingContext2D | null = canvas!.getContext('2d')
     if (score > 0 && score <= 10){
-        console.log("ohje")
+        let flower = new Center(30,30,"red");
+        flower.draw(canvasContext!);
     } else if (score > 10 && score <= 50){
         console.log("ganz gut")
     } else if (score > 50 && score <= 100){
@@ -34,6 +37,7 @@ function scoreStars (){
     }else{
         console.log("try again");
     }
+    highScoreInput.appendChild(canvas);
 }
 
 
