@@ -1,4 +1,4 @@
-export class Circle {
+export class Eyes {
     constructor(
       private readonly centerPointX: number,
       private readonly centerPointY:number,
@@ -8,7 +8,7 @@ export class Circle {
   
     draw(context: CanvasRenderingContext2D) {
       context.beginPath();
-      context.strokeStyle = this.centerColor;
+      context.fillStyle = this.centerColor;
       context.arc(
         this.centerPointX,
         this.centerPointY,
@@ -16,6 +16,14 @@ export class Circle {
         0,
         2 * Math.PI
       );
-      context.stroke();
+      context.arc(
+        this.centerPointX*2,
+        this.centerPointY,
+        this.centerRadius,
+        0,
+        2 * Math.PI,
+      );
+      context.fill();
     }
+
   }

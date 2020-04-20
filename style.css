@@ -9,7 +9,7 @@ body{
     width: 750px;
     margin: 0 auto;
     background-color:rgba(0, 128, 128, 0.698);
-    height: 400px;
+    height: 500px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     
@@ -49,3 +49,6 @@ h1{
     font-size: 18px;
 }
 
+.container canvas{
+    
+}
