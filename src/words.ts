@@ -57,7 +57,7 @@ export function check ():boolean {
     }
 }
 
-// the 
+// makes the random word and user input invisible 
 export function inputStop (): void {
     word.innerHTML = "";
     textEl.value = "";

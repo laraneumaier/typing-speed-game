@@ -9,10 +9,10 @@ const scoreInput: HTMLElement = document.getElementById("score")!;
 const highScoreInput = document.createElement("p");
 let highScore:number = 0;
 
-
+// shows the score while playing the game
 export function startScore (){
     scoreInput.classList.add("score");
-    score = 210;
+    score = 0;
     scoreInput.innerHTML = "Score: " + score;
 }
 export function plusScore(n:number){
@@ -23,6 +23,7 @@ export function showScore (n:number){
     return score;
 }
 
+// shows a reaction to your score 
 export function scoreStars (){
     let canvas = <HTMLCanvasElement>document.createElement("CANVAS");
     canvas.width=90;
@@ -58,7 +59,7 @@ export function scoreStars (){
      scoreInput.appendChild(feedbackText);
  }
  
-
+// shows the score and the highscore
 export function showHighScore(){
     if(localStorage.getItem("Highscore")){ 
         if(score > parseInt(localStorage.getItem("Highscore")!)){ //will never be null
