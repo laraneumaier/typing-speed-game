@@ -1,12 +1,4 @@
-## How to get started
+Test your typing speed and beat your own highscore! 
+The highscore is shown to you when the game is over. It will not be deleted even though you close the tap, so no worries. 
 
-Type npm i to install dependencies inside of the project folder in the terminal.
-
-Write any source files in typescript inside the source folder, the main file being index.ts as entry file for rollup.
-
-Type tsc to javascript
-
-Link your compiled bundle.js into your HTML-Files.
-
-
-
+To start the game, you have to type: npm i install 
