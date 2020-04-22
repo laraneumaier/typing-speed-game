@@ -9,7 +9,7 @@ body{
     width: 750px;
     margin: 0 auto;
     background-color:rgba(0, 128, 128, 0.698);
-    height: 500px;
+    height: 400px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     
@@ -49,6 +49,9 @@ h1{
     font-size: 18px;
 }
 
-.container canvas{
-    
+#score canvas{
+    color:#f1f1f1;
+    float: right;
+    margin-top: -130px;
+    margin-right: 180px;
 }

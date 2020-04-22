@@ -55,8 +55,8 @@ export function scoreStars (){
          
      }
      scoreInput.appendChild(highScoreInput);
-     scoreInput.appendChild(canvas);
      scoreInput.appendChild(feedbackText);
+     scoreInput.appendChild(canvas);
  }
  
 // shows the score and the highscore
