@@ -36,7 +36,7 @@ let randomword:string;
 
 // create a new word 
 function createWord ():string {
-    let randomnumber:number = (Math.floor(Math.random() * 19)); // random number from 0 till 19
+    let randomnumber:number = (Math.floor(Math.random() * programmingWords.length)); // random number from 0 till 19
     let wordspan: HTMLSpanElement = document.getElementById("random")!; 
     randomword = word.innerHTML = programmingWords[randomnumber];
     wordspan.appendChild(word);
