@@ -24,7 +24,7 @@ export function showScore (n:number){
 }
 
 // shows a reaction to your score 
-export function scoreStars (){
+export function scoreFeedback (){
     let canvas = <HTMLCanvasElement>document.createElement("CANVAS");
     canvas.width=90;
     canvas.height=90;

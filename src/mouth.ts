@@ -16,7 +16,8 @@ export class Mouth {
         this.centerPointY,
         this.centerRadius,
         0,
-        Math.PI,this.direction
+        Math.PI,
+        this.direction
       );
       context.stroke();
       context.beginPath();

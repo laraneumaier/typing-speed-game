@@ -1,4 +1,6 @@
-import { gameOver } from "./gameOver";
+import { inputStop } from "./words";
+import { showStartButton } from "./startButton";
+import { scoreFeedback, showHighScore } from "./score";
 
 var counter:number;
 const showTime: HTMLSpanElement = document.getElementById("countdown")!;
@@ -12,7 +14,10 @@ export function time(){
             if (counter <= 0){
                 clearInterval(countdown);
                 showTime.innerHTML = ""; 
-                gameOver();
+                inputStop();
+                showStartButton();
+                scoreFeedback();
+                showHighScore();
             }
     }, 1000); 
 } 

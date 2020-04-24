@@ -9,6 +9,7 @@ export class Circle {
     draw(context: CanvasRenderingContext2D) {
       context.beginPath();
       context.strokeStyle = this.centerColor;
+      context.fillStyle = this.centerColor;
       context.arc(
         this.centerPointX,
         this.centerPointY,
@@ -19,3 +20,4 @@ export class Circle {
       context.stroke();
     }
   }
+  

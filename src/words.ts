@@ -44,19 +44,14 @@ function createWord ():string {
 }
 
 // if the user input is correct, a new word is shown and he gets more time
-export function check ():boolean {
+export function check ():void{
     if (randomword === textEl.value){
         textEl.value = "";
         createWord ();
         addTime();
         plusScore(+1);
-        return true;
-        
-    }else {
-        return false;
-    }
+ }
 }
-
 // makes the random word and user input invisible 
 export function inputStop (): void {
     word.innerHTML = "";
