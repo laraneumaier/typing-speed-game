@@ -2,7 +2,7 @@ import { inputStop } from "./words";
 import { showStartButton } from "./startButton";
 import { scoreFeedback, showHighScore } from "./score";
 
-var counter:number;
+let counter:number;
 const showTime: HTMLSpanElement = document.getElementById("countdown")!;
 
 // every second the countdown is reduced by one

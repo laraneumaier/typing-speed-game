@@ -22,5 +22,4 @@ export class Mouth {
       context.stroke();
       context.beginPath();
     }
-
   }
